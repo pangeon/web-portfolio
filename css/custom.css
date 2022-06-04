@@ -1,1 +1,9 @@
 /* your styles go here */
+.light-frame {
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+.whitesmoke-frame {
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
