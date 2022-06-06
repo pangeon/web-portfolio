@@ -22,6 +22,7 @@
  * Contributors   Ryan Seddon, Ben Alman
  */
 
+// @ts-ignore
 window.Modernizr = (function( window, document, undefined ) {
 
     var version = '2.8.3',
@@ -451,6 +452,7 @@ window.Modernizr = (function( window, document, undefined ) {
     tests['touch'] = function() {
         var bool;
 
+        // @ts-ignore
         if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
           bool = true;
         } else {
@@ -500,6 +502,7 @@ window.Modernizr = (function( window, document, undefined ) {
     // documentMode logic from YUI to filter out IE8 Compat Mode
     //   which false positives.
     tests['hashchange'] = function() {
+      // @ts-ignore
       return isEventSupported('hashchange', window) && (document.documentMode === undefined || document.documentMode > 7);
     };
 
@@ -662,6 +665,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
           // Webkit allows this media query to succeed only if the feature is enabled.
           // `@media (transform-3d),(-webkit-transform-3d){ ... }`
+          // @ts-ignore
           injectElementWithStyles('@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}', function( node, rule ) {
             ret = node.offsetLeft === 9 && node.offsetHeight === 3;
           });
@@ -685,8 +689,10 @@ window.Modernizr = (function( window, document, undefined ) {
     tests['fontface'] = function() {
         var bool;
 
+        // @ts-ignore
         injectElementWithStyles('@font-face {font-family:"font";src:url("https://")}', function( node, rule ) {
           var style = document.getElementById('smodernizr'),
+              // @ts-ignore
               sheet = style.sheet || style.styleSheet,
               cssText = sheet ? (sheet.cssRules && sheet.cssRules[0] ? sheet.cssRules[0].cssText : sheet.cssText || '') : '';
 
@@ -731,12 +737,16 @@ window.Modernizr = (function( window, document, undefined ) {
         // IE9 Running on Windows Server SKU can cause an exception to be thrown, bug #224
         try {
             if ( bool = !!elem.canPlayType ) {
+                // @ts-ignore
                 bool      = new Boolean(bool);
+                // @ts-ignore
                 bool.ogg  = elem.canPlayType('video/ogg; codecs="theora"')      .replace(/^no$/,'');
 
                 // Without QuickTime, this value will be `undefined`. github.com/Modernizr/Modernizr/issues/546
+                // @ts-ignore
                 bool.h264 = elem.canPlayType('video/mp4; codecs="avc1.42E01E"') .replace(/^no$/,'');
 
+                // @ts-ignore
                 bool.webm = elem.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/^no$/,'');
             }
 
@@ -751,14 +761,19 @@ window.Modernizr = (function( window, document, undefined ) {
 
         try {
             if ( bool = !!elem.canPlayType ) {
+                // @ts-ignore
                 bool      = new Boolean(bool);
+                // @ts-ignore
                 bool.ogg  = elem.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,'');
+                // @ts-ignore
                 bool.mp3  = elem.canPlayType('audio/mpeg;')               .replace(/^no$/,'');
 
                 // Mimetypes accepted:
                 //   developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements
                 //   bit.ly/iphoneoscodecs
+                // @ts-ignore
                 bool.wav  = elem.canPlayType('audio/wav; codecs="1"')     .replace(/^no$/,'');
+                // @ts-ignore
                 bool.m4a  = ( elem.canPlayType('audio/x-m4a;')            ||
                               elem.canPlayType('audio/aac;'))             .replace(/^no$/,'');
             }
@@ -818,6 +833,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     // Thanks to Erik Dahlstrom
     tests['svg'] = function() {
+        // @ts-ignore
         return !!document.createElementNS && !!document.createElementNS(ns.svg, 'svg').createSVGRect;
     };
 
@@ -826,6 +842,7 @@ window.Modernizr = (function( window, document, undefined ) {
     tests['inlinesvg'] = function() {
       var div = document.createElement('div');
       div.innerHTML = '<svg/>';
+      // @ts-ignore
       return (div.firstChild && div.firstChild.namespaceURI) == ns.svg;
     };
 
@@ -893,6 +910,7 @@ window.Modernizr = (function( window, document, undefined ) {
                     inputElem.value         = smile;
                     inputElem.style.cssText = 'position:absolute;visibility:hidden;';
 
+                    // @ts-ignore
                     if ( /^range$/.test(inputElemType) && inputElem.style.WebkitAppearance !== undefined ) {
 
                       docElement.appendChild(inputElem);
@@ -900,6 +918,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
                       // Safari 2-4 allows the smiley as a value, despite making a slider
                       bool =  defaultView.getComputedStyle &&
+                              // @ts-ignore
                               defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== 'textfield' &&
                               // Mobile android web browser has false positive, so must
                               // check the height to see if the widget is actually there.
@@ -1049,7 +1068,9 @@ window.Modernizr = (function( window, document, undefined ) {
               var frag = document.createDocumentFragment();
               return (
                 typeof frag.cloneNode == 'undefined' ||
+                // @ts-ignore
                 typeof frag.createDocumentFragment == 'undefined' ||
+                // @ts-ignore
                 typeof frag.createElement == 'undefined'
               );
             }());
@@ -1075,6 +1096,7 @@ window.Modernizr = (function( window, document, undefined ) {
           parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
 
           p.innerHTML = 'x<style>' + cssText + '</style>';
+          // @ts-ignore
           return parent.insertBefore(p.lastChild, parent.firstChild);
         }
 
@@ -1175,20 +1197,25 @@ window.Modernizr = (function( window, document, undefined ) {
         function shivMethods(ownerDocument, data) {
           if (!data.cache) {
             data.cache = {};
+            // @ts-ignore
             data.createElem = ownerDocument.createElement;
+            // @ts-ignore
             data.createFrag = ownerDocument.createDocumentFragment;
             data.frag = data.createFrag();
           }
 
 
+          // @ts-ignore
           ownerDocument.createElement = function(nodeName) {
             //abort shiv
             if (!html5.shivMethods) {
               return data.createElem(nodeName);
             }
+            // @ts-ignore
             return createElement(nodeName, ownerDocument, data);
           };
 
+          // @ts-ignore
           ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
                                                           'var n=f.cloneNode(),c=n.createElement;' +
                                                           'h.shivMethods&&(' +
