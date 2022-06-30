@@ -23,3 +23,25 @@ scrollbar-width: none;  /* Firefox */
     padding: 10px;
     cursor: not-allowed;
 }
+.main-footer#footer-about-info-container{
+    background-color: #444;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#footer-about-info-text {
+    color: white;
+    margin-bottom: 15px;
+}
+#footer-about-info-text span {
+    vertical-align: middle;
+    font-size: 18px;
+}
+#footer-about-info-text i {
+    font-size: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+#copyright-info {
+    color: #999;
+}

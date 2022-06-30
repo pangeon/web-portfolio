@@ -582,6 +582,7 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 */
 #map {
   height: 400px;
+  border-top: 1px solid gainsboro;
 }
 
 /*
