@@ -28,6 +28,9 @@ scrollbar-width: none;  /* Firefox */
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.statistics-section .icon i {
+    font-size: 20px;
+}
 #footer-about-info-text {
     color: white;
     margin-bottom: 15px;
@@ -44,4 +47,13 @@ scrollbar-width: none;  /* Firefox */
 }
 #copyright-info {
     color: #999;
+}
+.customers-section img:hover {
+    transform: translateY(-10px);
+    transition: 250ms ease-in-out;
+}
+footer.main-footer p.social a:hover {
+    background-color: black;
+    transition: 500ms ease-in-out;
+    color: white;
 }
