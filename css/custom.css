@@ -23,6 +23,13 @@ scrollbar-width: none;  /* Firefox */
     padding: 10px;
     cursor: not-allowed;
 }
+#link-cv {
+    text-decoration: none;
+}
+#link-cv:hover {
+    color: white;
+    transition: 500ms;
+}
 .main-footer#footer-about-info-container{
     background-color: #444;
     padding-top: 10px;
