@@ -1,3 +1,38 @@
+Page - cecherz.tink.pl changelog
+--------------------------------
+- Fri Jul 15 14:56:08 2022 +0200
+    Handle contact form
+
+- Fri Jul 8 21:16:49 2022 +0200
+    add project gwiazdy pop, new links
+
+- Fri Jul 1 20:14:14 2022 +0200
+    better icons and hover animations
+
+- Thu Jun 30 16:35:24 2022 +0200
+    update footer
+
+- Mon Jun 27 23:47:38 2022 +0200
+    add jmtrain project
+
+- Thu Jun 16 23:55:31 2022 +0200
+    add calc-bill project
+
+- Wed Jun 15 13:23:13 2022 +0200
+    add Taskello project
+
+- Wed Jun 15 00:00:07 2022 +0200
+    edit icons on page
+
+- Fri Jun 10 22:43:54 2022 +0200
+    add sekp to projects edit technology bar and footer socials
+
+- Sat Jun 4 00:42:42 2022 +0200
+    edit nav and about me section
+
+- Fri Jun 3 23:09:31 2022 +0200
+    init repository
+
 ################################################################################################
 
 IT Worker Template by Bootstrapious -  https://bootstrapious.com
@@ -89,3 +124,4 @@ Thank you for understanding and respecting the license conditions.
 ---------------------
 
 https://twitter.com/bootstrapious | https://google.com/+Bootstrapious1 | https://www.facebook.com/bootstrapious | hello@bootstrapious.com
+
