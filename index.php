@@ -32,72 +32,20 @@
   </head>
 
   <body>
-    <!-- Main nav -->
+    <!-- Site fragments -->
     <?php
-      $content = file_get_contents("fragments/main_nav.html");
-      echo $content;
+      $content[0] = file_get_contents("fragments/main_nav.html");
+      $content[1] = file_get_contents("fragments/intro_image.html");
+      $content[2] = file_get_contents("fragments/about.html");
+      $content[3] = file_get_contents("fragments/projects.html");
+      $content[4] = file_get_contents("fragments/customers.html");
+      $content[5] = file_get_contents("fragments/contact.html");
+      $content[6] = file_get_contents("fragments/map.html");
+      $content[7] = file_get_contents("fragments/top_footer.html");
+      $content[8] = file_get_contents("fragments/bottom_footer.html");
+      for($i = 0; $i < 9; $i++) echo $content[$i];
     ?>
-    <!-- Main nav -->
-
-    <!-- Intro image-->
-    <?php
-      $content = file_get_contents("fragments/intro_image.html");
-      echo $content;
-    ?>
-    <!-- Intro image-->
-
-    <!-- About-->
-    <?php
-      $content = file_get_contents("fragments/about.html");
-      echo $content;
-    ?>
-    <!-- About -->
-
-    <!-- Service -->
-    <?php
-      $content = file_get_contents("fragments/service.html");
-      echo $content;
-    ?>
-    <!-- Service -->
-
-    <!-- Projects -->
-    <?php
-      $content = file_get_contents("fragments/projects.html");
-      echo $content;
-    ?>
-    <!-- Projects -->
-
-    <!-- Customers-->
-    <?php
-      $content = file_get_contents("fragments/customers.html");
-      echo $content;
-    ?>
-    <!-- Customers-->
-
-    <!-- Contact-->
-    <?php
-      $content = file_get_contents("fragments/contact.html");
-      echo $content;
-    ?>
-    <!-- Contact-->
-
-    <!-- Map-->
-    <div id="map"></div>
-    <!-- Map-->
-    
-    <!-- Top footer -->
-    <?php
-      $content = file_get_contents("fragments/top_footer.html");
-      echo $content;
-    ?>
-    <!-- Top footer -->
-
-    <!-- Buttom footer -->
-    <?php
-      $content = file_get_contents("fragments/bottom_footer.html");
-      echo $content;
-    ?>
-    <!-- Buttom footer -->
+    <!-- Site fragments -->
 
     <!-- JavaScript files -->
     <script src="vendor/jquery/jquery.min.js"></script>
