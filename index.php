@@ -37,13 +37,14 @@
       $content[0] = file_get_contents("fragments/main_nav.html");
       $content[1] = file_get_contents("fragments/intro_image.html");
       $content[2] = file_get_contents("fragments/about.html");
-      $content[3] = file_get_contents("fragments/projects.html");
-      $content[4] = file_get_contents("fragments/customers.html");
-      $content[5] = file_get_contents("fragments/contact.html");
-      $content[6] = file_get_contents("fragments/map.html");
-      $content[7] = file_get_contents("fragments/top_footer.html");
-      $content[8] = file_get_contents("fragments/bottom_footer.html");
-      for($i = 0; $i < 9; $i++) echo $content[$i];
+      $content[3] = file_get_contents("fragments/service.html");
+      $content[4] = file_get_contents("fragments/projects.html");
+      $content[5] = file_get_contents("fragments/customers.html");
+      $content[6] = file_get_contents("fragments/contact.html");
+      $content[7] = file_get_contents("fragments/map.html");
+      $content[8] = file_get_contents("fragments/top_footer.html");
+      $content[9] = file_get_contents("fragments/bottom_footer.html");
+      for($i = 0; $i < 10; $i++) echo $content[$i];
     ?>
     <!-- Site fragments -->
 
