@@ -313,7 +313,8 @@ $(function () {
 function map() {
 
     var mapId = 'map',
-        mapCenter = [51.65813,19.37656],
+        mapCenter = [51.7681528,19.4483255],
+        // 51.65813,19.37656
         mapMarker = true;
 
     // @ts-ignore
