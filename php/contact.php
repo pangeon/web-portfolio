@@ -4,13 +4,13 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'mail@cecherz.tink.pl';
+$from = 'mail@cecherz.pl';
 
 // an email address that will receive the email with the output of the form
 $sendTo = 'cecherz@outlook.com';
 
 // subject of the email
-$subject = 'Nowa wiadomość z formularza kontaktowego - cecherz.tink.pl';
+$subject = 'Nowa wiadomość z formularza kontaktowego - cecherz.pl';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
